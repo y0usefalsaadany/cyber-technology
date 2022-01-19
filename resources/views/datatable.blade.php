@@ -49,10 +49,7 @@
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="">log out</a>
-                                <form id="logout-form" action="" method="POST" class="d-none">
-                                    @csrf
-                                </form>
+                                <a class="dropdown-item" href="logout">log out</a>
                             </div>
                         </div>
                     </div>
@@ -174,7 +171,7 @@
                                                         <button type="submit" class="btn btn-danger">Delete</button>
                                                     </form>
                                                 </td> 
-                                                <td>$item->created_at</td>
+                                                <td>{{$item->created_at}}</td>
                                             </tr>   
                                             @endforeach
                                         </tbody>

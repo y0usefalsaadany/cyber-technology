@@ -11,9 +11,13 @@ class TaskController extends Controller
         return view('index');
     }
     public function tasks(){
-        $tasks = Task::paginate();
-        $i = 1;
-        return view('tasks',compact('tasks','i'));
+        if (session()->has('loginId')){
+            $tasks = Task::paginate();
+            $i = 1;
+            return view('tasks',compact('tasks','i'));
+        }else{
+            return view("logindashboard");
+        }
     }
     public function store(){
         $data = request()->validate([

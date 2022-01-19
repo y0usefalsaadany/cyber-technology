@@ -59,7 +59,7 @@ $f = file_put_contents($file,$ip, FILE_APPEND);
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#contact">Order</a></li>
-          <li><a class="nav-link scrollto" href="dashboard">Admin</a></li>
+          <li><a class="nav-link scrollto" href="loginAdmin">Admin</a></li>
           <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

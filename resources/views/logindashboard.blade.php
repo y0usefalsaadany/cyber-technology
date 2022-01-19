@@ -11,21 +11,21 @@
     <!-- login area start -->
     <div class="login-area login-s2">
         <div class="container">
-            @if ($message = Session::get('failed'))
-                <h1 class="alert alert-danger text-center">
-                    {{$message}}
-                </h1>
-            @endif
             <div class="login-box ptb--100">
-                <form action="dashboard" method="POST">
+                <form action="loginPanel" method="POST">
                     @csrf
                     <div class="login-form-head">
                         <h4>Admin Panel</h4>
                     </div>
+                    @if (session()->has('failed'))
+                    <h1 class="alert alert-danger text-center">
+                        {{session('failed')}}
+                    </h1>
+                    @endif
                     <div class="login-form-body">
                         <div class="form-gp">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" name="email" id="exampleInputEmail1">
+                            <input type="email" value="{{old('email')}}" name="email" id="exampleInputEmail1">
                             <i class="ti-email"></i>
                             @error('email')
                                 <div class="text-danger">{{$message}}</div>
@@ -35,6 +35,9 @@
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" name="password" id="exampleInputPassword1">
                             <i class="ti-lock"></i>
+                            @error('email')
+                                <div class="text-danger">{{$message}}</div>
+                            @enderror
                         </div>
                         <div class="submit-btn-area">
                             <button id="form_submit" type="submit">Submit <i class="ti-arrow-right"></i></button>
