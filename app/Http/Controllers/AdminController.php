@@ -94,7 +94,6 @@ class AdminController extends Controller
             'is_admin'=>'required|min:1|max:1'
         ]);
         $edit->update($data);
-        $edit->save();
         return redirect('admin-panel')->with('success','your account has been updated');
     }
 
