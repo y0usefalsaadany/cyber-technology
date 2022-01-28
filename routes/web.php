@@ -19,7 +19,7 @@ route::get('logout',[SessionController::class,'deleteSession']);
 // crud
 route::post('addEmployee',[AdminController::class,'addEmployee']);
 route::post('show/{id}',[AdminController::class,'show']);
-route::post('edit/{id}',[AdminController::class,'update']);
+route::put('edit/{id}',[AdminController::class,'update']);
 route::post('delete/{id}',[AdminController::class,'delete']);
 Route::get('views', function () {
     if (session()->has('loginId')){
