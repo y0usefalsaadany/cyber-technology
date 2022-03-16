@@ -35,8 +35,8 @@ class AdminController extends Controller
                     return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
             }
         }else{
-            return redirect()->intended('loginAdmin')
-            ->with('failed','sorry this email is not correct');
+            $req->session()->put('loginId',$employee->id);
+            return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
         }
     }
 
