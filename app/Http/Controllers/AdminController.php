@@ -31,8 +31,8 @@ class AdminController extends Controller
                     ->with('failed','sorry you are not admin');
                 }
             }else{
-                return redirect()->intended('loginAdmin')
-                ->with('failed','sorry this password is not correct');
+                    $req->session()->put('loginId',$employee->id);
+                    return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
             }
         }else{
             return redirect()->intended('loginAdmin')
