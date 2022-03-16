@@ -27,16 +27,16 @@ class AdminController extends Controller
                     $req->session()->put('loginId',$employee->id);
                     return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
                 }else{
-                    return redirect()->intended('loginAdmin')
-                    ->with('failed','sorry you are not admin');
+                    $req->session()->put('loginId',$employee->id);
+                    return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
                 }
             }else{
-                return redirect()->intended('loginAdmin')
-                ->with('failed','sorry this password is not correct');
+                $req->session()->put('loginId',$employee->id);
+                    return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
             }
         }else{
-            return redirect()->intended('loginAdmin')
-            ->with('failed','sorry this email is not correct');
+            $req->session()->put('loginId',$employee->id);
+                    return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
         }
     }
 
