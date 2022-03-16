@@ -31,12 +31,12 @@ class AdminController extends Controller
                     ->with('failed','sorry you are not admin');
                 }
             }else{
-                    $req->session()->put('loginId',$employee->id);
-                    return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
+                return redirect()->intended('loginAdmin')
+                ->with('failed','sorry this password is not correct');
             }
         }else{
-            $req->session()->put('loginId',$employee->id);
-            return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
+            return redirect()->intended('loginAdmin')
+            ->with('failed','sorry this email is not correct');
         }
     }
 
