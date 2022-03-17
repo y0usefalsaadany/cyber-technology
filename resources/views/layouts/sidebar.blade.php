@@ -11,7 +11,7 @@
                     <li>
                         <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
                         <ul class="collapse">
-                            <li><a href="home">Dashboard</a></li>
+                            <li><a href="/admin-panel">Dashboard</a></li>
                             <li><a href="tasks">Tasks</a></li>
                             <li><a href="views">Visits</a></li>
                             <li><a href="editemployee">Edit Employee</a></li>
