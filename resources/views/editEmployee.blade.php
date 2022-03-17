@@ -65,7 +65,7 @@
                                 <h4 class="header-title">Edit</h4>                               
                                 <form method="POST" action="/edit/{{$data->id}}">
                                 @csrf
-                                method('PUT')
+                                @method('PUT')
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Name</label>
                                         <input type="text" name="name" value="{{$data->name}}" class="form-control" id="exampleInputPassword1">
