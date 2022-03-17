@@ -14,7 +14,6 @@
                             <li><a href="/admin-panel">Dashboard</a></li>
                             <li><a href="tasks">Tasks</a></li>
                             <li><a href="views">Visits</a></li>
-                            <li><a href="editemployee">Edit Employee</a></li>
                         </ul>
                     </li>
 
