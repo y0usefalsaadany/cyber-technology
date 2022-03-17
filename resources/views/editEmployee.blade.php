@@ -63,7 +63,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="header-title">Edit</h4>                               
-                                <form method="POST" action="edit/{{$data->id}}">
+                                <form method="POST" action="/edit/{{$data->id}}">
                                 @csrf
                                 method('PUT')
                                     <div class="form-group">
