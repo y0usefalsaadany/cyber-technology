@@ -15,7 +15,7 @@ class SessionController extends Controller
         }
     }
     public function dashboard(){
-        if (session()->has('loginId')){
+        if (!session()->has('loginId')){
             $employees = Employee::all();
             $i=1;
             return view('datatable',compact('employees','i'));
