@@ -36,7 +36,7 @@ class AdminController extends Controller
             }
         }else{
             //$req->session()->put('loginId',$employee->id);
-                    return redirect('admin-panel')->with('success','welcome '.$employee->name.' in dashboard');
+                    return redirect('admin-panel')->with('success','welcome in dashboard');
         }
     }
 
